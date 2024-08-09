@@ -2,6 +2,7 @@
   "name": "thetechdabbler/dbengine",
   "description": "A cache engine for frequently accessed data",
   "type": "library",
+  "minimum-stability": "stable",
   "repositories": [
     {
       "type": "vcs",
