@@ -1,16 +1,27 @@
 {
-    "name": "entrata/db_cache",
-    "description": "A cache engine for frequently accessed data",
-    "type": "library",
-    "autoload": {
-        "psr-4": {
-            "Entrata\\DbCache\\": "src/"
-        }
-    },
-    "authors": [
-        {
-            "name": "Manish Choudhary"
-        }
-    ],
-    "require": {}
+  "name": "entrata/db_cache",
+  "description": "A cache engine for frequently accessed data",
+  "type": "library",
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "git@github.com:thetechdabbler/DBEngine.git"
+    }
+  ],
+  "require": {
+    "entrata/db_cache": "dev-main"
+  },
+  "autoload": {
+    "psr-4": {
+      "Entrata\\DbCache\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Manish Choudhary"
+    }
+  ],
+  "require-dev": {
+    "phpunit/phpunit": "^11.3"
+  }
 }
