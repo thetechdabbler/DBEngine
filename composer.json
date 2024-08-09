@@ -1,0 +1,16 @@
+{
+    "name": "entrata/db_cache",
+    "description": "A cache engine for frequently accessed data",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Entrata\\DbCache\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Manish Choudhary"
+        }
+    ],
+    "require": {}
+}

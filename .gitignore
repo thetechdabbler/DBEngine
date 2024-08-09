@@ -1,0 +1,6 @@
+./Dockerfile
+./docker-compose.yml
+./docker-compose.override.yml
+/vendor/
+/.phpunit.cache
+/.phpunit.result.cache
