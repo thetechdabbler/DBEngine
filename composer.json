@@ -1,5 +1,5 @@
 {
-  "name": "entrata/db_cache",
+  "name": "thetechdabbler/dbengine",
   "description": "A cache engine for frequently accessed data",
   "type": "library",
   "repositories": [
@@ -9,7 +9,7 @@
     }
   ],
   "require": {
-    "entrata/db_cache": "dev-main"
+    "thetechdabbler/dbengine": "dev-main"
   },
   "autoload": {
     "psr-4": {
