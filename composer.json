@@ -23,6 +23,7 @@
     "phpunit/phpunit": "^11.3"
   },
   "require": {
-    "aws/aws-sdk-php": "^3.319"
+    "aws/aws-sdk-php": "^3.319",
+    "ext-redis": "*"
   }
 }

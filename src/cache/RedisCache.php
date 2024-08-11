@@ -3,7 +3,6 @@
 namespace Entrata\DBCache\Cache;
 
 use Entrata\DBCache\Cache\ICacheEngine;
-use Redis;
 
 class RedisCache implements ICacheEngine {
     public function delete($key) {
@@ -11,9 +10,8 @@ class RedisCache implements ICacheEngine {
     }
     private $redis;
 
-    public function __construct($host, $port) {
-        $this->redis = new Redis();
-        $this->redis->connect($host, $port);
+    public function __construct($redis) {
+        $this->redis = $redis;
     }
 
     public function get($key) {
