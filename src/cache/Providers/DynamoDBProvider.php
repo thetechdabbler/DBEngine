@@ -1,15 +1,17 @@
 <?php
 namespace Entrata\DBCache\Cache;
 
-use Entrata\DBCache\Cache\ICacheEngine;
+use Entrata\DBCache\Cache\Providers\ICacheProvider;
 
-class DynamoDBCache implements ICacheEngine {
+class DynamoDBProvider implements ICacheProvider {
+
+
     private $client;
     private $table_name;
 
-    public function __construct($client, $table_name) {
+    public function __construct($client) {
         $this->client = $client;
-        $this->table_name = $table_name;
+        //$this->table_name = $table_name;
     }
 
     public function get($key) {
@@ -25,7 +27,7 @@ class DynamoDBCache implements ICacheEngine {
         return null;
     }
 
-    public function set($key, $value) {
+    public function set($key, $value, $ttl = 0) {
         $this->client->putItem([
             'TableName' => $this->table_name,
             'Item' => [
@@ -42,5 +44,9 @@ class DynamoDBCache implements ICacheEngine {
                 'key' => ['S' => $key]
             ]
         ]);
+    }
+
+    public function clear() {
+        // Implement the clear method logic here
     }
 }

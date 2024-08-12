@@ -1,10 +1,32 @@
 <?php
 namespace Entrata\DBCache\Cache;
+interface IDataset
+{
+    /**
+     * Get the unique key for this dataset.
+     *
+     * @return string
+     */
+    public function getKey(): string;
 
-interface IDataset {
-    public function toArray();
+    /**
+     * Load data from the dataset.
+     *
+     * @return mixed
+     */
+    public function load();
 
-    public function setData($data);
+    /**
+     * Check if the dataset needs to be refreshed.
+     *
+     * @return bool
+     */
+    public function needsRefresh(): bool;
 
-    public function get();
+    /**
+     * Refresh the dataset.
+     *
+     * @return void
+     */
+    public function refresh();
 }
