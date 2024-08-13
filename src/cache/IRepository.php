@@ -2,7 +2,7 @@
 
 namespace Entrata\DBCache\Cache;
 
-interface Repository
+interface IRepository
 {
     /**
      * Fetch data by a given key.
