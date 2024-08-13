@@ -11,6 +11,7 @@ class RedisCacheProvider implements CacheProvider
     public function __construct(Redis $redis)
     {
         $this->redis = $redis;
+        
     }
 
     public function get(string $key)
