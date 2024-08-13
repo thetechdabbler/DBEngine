@@ -1,5 +1,5 @@
 <?php
-namespace Entrata\DBCache\Cache;
+namespace Entrata\DBCache\Cache\Providers;
 
 use Entrata\DBCache\Cache\Providers\ICacheProvider;
 

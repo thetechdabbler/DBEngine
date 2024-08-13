@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Repository;
+namespace Entrata\DBCache\Cache;
 
 interface Repository
 {
