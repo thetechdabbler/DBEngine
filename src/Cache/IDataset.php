@@ -21,7 +21,7 @@ interface IDataset
      *
      * @return bool
      */
-    public function needsRefresh(): bool;
+    public function needsRefresh($data): bool;
 
     /**
      * Refresh the dataset.
@@ -29,4 +29,11 @@ interface IDataset
      * @return void
      */
     public function refresh();
+
+    /**
+     * Map the data to the dataset.
+     * @param mixed $data
+     * @return void
+     */
+    public function assignData($data);
 }

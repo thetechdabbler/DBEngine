@@ -4,14 +4,14 @@ namespace Entrata\DBCache\Cache\Providers;
 
 use Redis;
 
-class RedisCacheProvider implements CacheProvider
+class RedisCacheProvider implements ICacheProvider
 {
     protected $redis;
 
     public function __construct(Redis $redis)
     {
         $this->redis = $redis;
-        
+
     }
 
     public function get(string $key)
@@ -19,7 +19,7 @@ class RedisCacheProvider implements CacheProvider
         return $this->redis->get($key);
     }
 
-    public function set(string $key, $value, int $ttl = 0)
+    public function set(string $key, $value, int $ttl = 1000)
     {
         $this->redis->set($key, $value, $ttl);
     }
